@@ -1,3 +1,5 @@
+<!-- Created by Aksel Rasmussen in 2024 -->
+
 # Windows 10 Proxy Settings
 
 A guide for setting up Windows 10 on Iserink with internet.

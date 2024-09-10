@@ -1,3 +1,5 @@
+<!-- Created by SQL Sith in 2024 -->
+
 # Contributing to this repo
 
 The general workflow for contributing to this repo is straightforward:
