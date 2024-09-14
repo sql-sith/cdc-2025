@@ -1,3 +1,5 @@
+<!-- Created by SQL Sith in 2024 -->
+
 # Cedar Rapids Area Homeschools
 
 ## IT Club Cyber Defense, 2024-2025 season
