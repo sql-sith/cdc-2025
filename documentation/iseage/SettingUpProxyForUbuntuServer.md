@@ -18,7 +18,7 @@
 	   - to: default
 	     via: 144.76.90.254
 	  nameservers:
-	    addresses: [144.76.90.254]
+	    addresses: [144.76.90.254/24]
 	```
 	> Replace `{num}` with a unique number from `1` to `253`.
 3) Add the following lines to the end of `/etc/profile`:
