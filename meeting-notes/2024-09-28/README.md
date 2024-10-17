@@ -110,6 +110,7 @@ But ... is this code bullet-proof? What if somebody had a really big history siz
 
 Can you come up with a more robust solution? Feel free to use good online sources, but come to class ready to explain what your solution does or to ask why it works.
 
+<!-- markdownlint-disable-next-line MD026 -->
 ## Free Club BONUS - DHCP is Functioning! More!
 
 Just for being a member of our club, we have a free ICERINK DHCP server available for you. Tristan's DHCP server is up and running *and* (this is the big news) it can hand out Proxy addresses automatically. It's pretty easy to get Windows and Linux Network Manager to use these proxy settings. Netplan does not integrate with it as well.
