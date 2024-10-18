@@ -181,10 +181,10 @@ This section will show you how to create, reference, and undefine `bash` variabl
 
 ##### Creating Shell Variables
 
-Creating **shell variables** in bash is easy. Just name the variable and give it a value. 
+Creating **shell variables** in bash is easy. Just name the variable and give it a value.
 
 ```bash
-$ year_of_arrival=2030
+year_of_arrival=2030
 ```
 
 ##### Using Shell Variables
@@ -203,11 +203,11 @@ NASA's Europa Clipper is expected to reach the Jupiter system in 2030.
 To create an **environment variable**, you first create a **shell variable** and then `export` it to the list of **environment variables** for the current shell. It is possible to create and export a variable in one step.
 
 ```bash
-$ # export an existing variable sometime after it's created:
+# export an existing variable sometime after it's created:
 $ first_name=Chris
 $ export first_name
 
-$ # create and export a variable with one command:
+# create and export a variable with one command:
 $ export last_name=Leonard
 ```
 
@@ -227,28 +227,28 @@ The main use of **environment variables** is to pass information to subshells. E
 Starting a new `bash` shell loads **shell variables** from sources like `.bashrc` and `.profile`, along with copies of **environment variables**. You can tell these variables are copies, not references to the actual **environment variables**, by noticing that changes in a subshell don't affect the caller's variables. If shells accessed the actual **environment variables**, changes in one shell would propogate across all shells. Because of this behavior, you can think of a set of **environment variables** as a template used to create **shell variables** in a new shell.
 
 ```bash
-$ # create an environment variable:
+# create an environment variable:
 $ my_envvar=10
 $ export my_envvar
 $ echo "$my_envvar"
 10
 
-$ # start subshell
+# start subshell
 $ bash
 
-$ # show that $my_envvar was inherited properly:
+# show that $my_envvar was inherited properly:
 echo "$my_envvar"
 10
 
-$ # modify the value of my_envvar in the subshell:
+# modify the value of my_envvar in the subshell:
 $ my_envvar=25
 $ echo "$my_envvar"
 25
 
-$ # exit the subshell:
+# exit the subshell:
 $ exit
 
-$ # notice that the parent shell's copy of $my_envvar did not change:
+# notice that the parent shell's copy of $my_envvar did not change:
 $ echo "$my_envvar"
 10
 ```
@@ -280,16 +280,16 @@ The right way to undefine a variable is to use `unset`:
 ```bash
 $ color=red
 $ export red
-$ # it's an shell variable:
+# it's an shell variable:
 $ set|grep red
 color=red
-$ # it's also an environment variable:
+# it's also an environment variable:
 $ env|grep red
 color=red
 
 $ unset color
 
-$ # now it's completely gone:
+# now it's completely gone:
 $ echo $color
 
 $ set|grep red

@@ -1,6 +1,6 @@
-# How the Internet Works,
+# How the Internet Works
 
-and Aliens
+...and Aliens
 
 Cyber Defense Club, 2024-09-28
 

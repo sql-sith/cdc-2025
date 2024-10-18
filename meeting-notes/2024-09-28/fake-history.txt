@@ -1,0 +1,1000 @@
+ 1095  bash
+ 1096  myname=Chris bash -c "echo $myname"
+ 1097  myname=Chris bash -c "echo xyz"
+ 1098  myname=Chris bash
+ 1099  echo $myname
+ 1100  clear
+ 1101  set $name
+ 1102  echo $name
+ 1103  name=
+ 1104  echo $name
+ 1105  env|grep name
+ 1106  set|grep name
+ 1107  clear
+ 1108  unset $name
+ 1109  set|grep name
+ 1110  env|grep name
+ 1111  name="Charlie Brown"
+ 1112  clear
+ 1113  echo $name
+ 1114  env|grep Charlie
+ 1115  unset $name
+ 1116  env|grep Charlie
+ 1117  unset your mom
+ 1118  unset name
+ 1119  env|grep Charlie
+ 1120  set|grep Charlie
+ 1121  #!/bin/bash
+ 1122  # Define the options
+ 1123  PS3="Please select your favorite fruit: "
+ 1124  options=("Apple" "Banana" "Cherry" "Quit")
+ 1125  # Select loop to display the menu
+ 1126  select fruit in "${options[@]}"; do     case $fruit in         "Apple")             echo "You selected Apple.";             ;;         "Banana")             echo "You selected Banana.";             ;;         "Cherry")             echo "You selected Cherry.";             ;;         "Quit")             echo "Goodbye!";             break;             ;;         *)             echo "Invalid option. Please try again.";             ;;     esac; done
+ 1127  pwd
+ 1128  clear
+ 1129  square_number() {     local number=$1;     local result=$((number * number));     echo $result;     return 0; }
+ 1130  func square_number() {
+ 1131      local number=$1
+ 1132      local result=$((number * number))
+ 1133      echo $result
+ 1134      return 0
+ 1135  function x() { x=5; }
+ 1136  function square_number() {     local number=$1;     local result=$((number * number));     echo $result;     return 0; }
+ 1137  type square_number_number
+ 1138  type square_number
+ 1139  which square_number
+ 1140  square_number 14
+ 1141  echo $(( 9/4 ))
+ 1142  squared_value=$(square_number $number_to_square)
+ 1143  echo $squared_value 
+ 1144  number_to_square=24
+ 1145  squared_value=$(square_number $number_to_square)
+ 1146  echo $squared_value 
+ 1147  echo "The square of $number_to_square is $squared_value."
+ 1148  echo 'The square of $number_to_square is $squared_value.'
+ 1149  echo "The square of \$number_to_square is \$squared_value."
+ 1150  clear
+ 1151  man if
+ 1152  help if
+ 1153  tldr if
+ 1154  man tldr
+ 1155  tldr tldr
+ 1156  info if
+ 1157  man bash
+ 1158  if [[ 1 -eq 1 ]]; then   echo "true";   echo "so celebrate"; else   echo "false; me so sad"; fi
+ 1159  which [
+ 1160  man bash
+ 1161  cd /mnt/c/temp/files/
+ 1162  ll *.txt
+ 1163  for f in *.txt; do   echo "I found a text file named $f."; done
+ 1164  for f in $(ls *.txt); do   echo "I found a text file named $f."; done
+ 1165  ls *.txt
+ 1166  # Initialize the counter
+ 1167  counter=5
+ 1168  # While loop to count down from 5 to 1
+ 1169  while [ $counter -gt 0 ]; do     echo "Countdown: $counter";     ((counter--));     sleep 1; done
+ 1170  echo "Time's up!"
+ 1171  while [ $counter -gt 0 ]; do     echo "Countdown: $counter";     ((counter--));     sleep 1; done
+ 1172  counter=5
+ 1173  # While loop to count down from 5 to 1
+ 1174  while [ $counter -gt 0 ]; do     echo "Countdown: $counter";     ((counter--));     sleep 1; done
+ 1175  echo $__elapsed__ 
+ 1176  date +%A
+ 1177  date %YYYY
+ 1178  date +%YYYY
+ 1179  date +%Y%m
+ 1180  date +%Y%m%DT%H%M%S
+ 1181  date +%Y%m%dT%H%M%S
+ 1182  day=$(date +%A)
+ 1183  # Case statement to print a message based on the day
+ 1184  case $day in     Monday)         echo "Start of the work week!";         ;;     Tuesday)         echo "It's Tuesday. Keep going!";         ;;     Wednesday)         echo "Midweek already!";         ;;     Thursday)         echo "Almost there!";         ;;     Friday)         echo "It's Friday! Weekend is near.";         ;;     Saturday|Sunday)         echo "Enjoy your weekend!";         ;;     *)         echo "Unknown day: $day";         ;; esac
+ 1185  day=Sonabend
+ 1186  day=Samstag
+ 1187  case $day in     Monday)         echo "Start of the work week!";         ;;     Tuesday)         echo "It's Tuesday. Keep going!";         ;;     Wednesday)         echo "Midweek already!";         ;;     Thursday)         echo "Almost there!";         ;;     Friday)         echo "It's Friday! Weekend is near.";         ;;     Saturday|Sunday)         echo "Enjoy your weekend!";         ;;     *)         echo "Unknown day: $day";         ;; esac
+ 1188  clear
+ 1189  select fruit in "${options[@]}"; do     case $fruit in         "Apple")             echo "You selected Apple.";             ;;         "Banana")             echo "You selected Banana.";             ;;         "Cherry")             echo "You selected Cherry.";             ;;         "Quit")             echo "Goodbye!";             break;             ;;         *)             echo "Invalid option. Please try again.";             ;;     esac; done
+ 1190  echo ${BASH_SOURCE[0]}
+ 1191  echo ${BASH_SOURCE[1]}
+ 1192  clear
+ 1193  echo $USER 
+ 1194  echo ${#USER}
+ 1195  echo ${USER}
+ 1196  echo ${#USER}
+ 1197  echo ${USER:3}
+ 1198  echo ${USER:2}
+ 1199  echo ${USER:1:3}
+ 1200  echo ${USER:1:2}
+ 1201  echo ${USER:1: -2}
+ 1202  echo ${USER:1: -1}
+ 1203  echo ${USER:1:-1}
+ 1204  echo ${USER:1:-2}
+ 1205  clear
+ 1206  env
+ 1207  cd /etc
+ 1208  cat environment
+ 1209  cat profile
+ 1210  cat bash.bashrc 
+ 1211  cd profile.d
+ 1212  ls
+ 1213  clear
+ 1214  clear
+ 1215  name=bruce lee
+ 1216  name="bruce lee"
+ 1217  echo $name
+ 1218  clear
+ 1219  name="bruce lee"
+ 1220  clear
+ 1221  name="bruce lee"
+ 1222  echo $name
+ 1223  set|grep bruce
+ 1224  env|grep bruce
+ 1225  bash
+ 1226  echo $name
+ 1227  export
+ 1228  export bruce
+ 1229  export name
+ 1230  set|grep name
+ 1231  set|grep bruce
+ 1232  env|grep bruce
+ 1233  cat /etc/environment
+ 1234  ll /env
+ 1235  ll /etc
+ 1236  clear
+ 1237  ps
+ 1238  exit
+ 1239  counter=5
+ 1240  counter=$((counter-1))
+ 1241  echo $counter
+ 1242  /tmp/1.sh
+ 1243  chmod 755 /tmp/1.sh 
+ 1244  /tmp/1.sh
+ 1245  # Define a function
+ 1246  function square_number() {     local number="$1";     local result=$((number * number))     echo $result;     return 0; }
+ 1247  square_number 12
+ 1248  function square_me() {
+ 1249      local number_to_square="$1";     local squared_value=$(square_number $number_to_square)
+ 1250      echo "The square of $number_to_square is $squared_value."; }
+ 1251  square_me() 13
+ 1252  square_me 13
+ 1253  function iffy() {     local num = "$1"     if [[ $num -eq 1 ]]; then         echo "\$num is 1!";         echo "So celebrate!";     elif;         echo "\$num is $num!";         echo "No celebrating!";     else
+ 1254          echo "\$num is '$num'. Is this actually a value?"
+ 1255      fi
+ 1256  }
+ 1257  echo $num
+ 1258  num=2
+ 1259  if [[ $num -eq 1 ]]; then echo "\$num is 1!"; echo "So celebrate!"; elif; echo "\$num is $num!"; echo "No celebrating!"; else
+ 1260  help if
+ 1261  /tmp/1.sh
+ 1262  format
+ 1263  man fmt
+ 1264  /tmp/1.sh
+ 1265  type square_number
+ 1266  type square_number | fmt
+ 1267  type square_number | sed 's/^/    /'
+ 1268  echo -e "\nabc\n"
+ 1269  echo "\nabc\n"
+ 1270  /tmp/1.sh 
+ 1271  ype square_me 
+ 1272  type square_me | head --lines=+1
+ 1273  type square_me | head --lines=-1
+ 1274  type square_me | head --lines=-2
+ 1275  type square_me | head --lines=+2
+ 1276  type square_me | tail --lines=1
+ 1277  type square_me | tail --lines=-1
+ 1278  type square_me | tail --lines=+1
+ 1279  type square_me | tail --lines=+2
+ 1280  /tmp/1.sh
+ 1281  type iffy
+ 1282  function iffy() {     local num = "$1"     if [[ $num -eq "1" ]]; then         echo "\$num is 1!";         echo "So celebrate!";     elif [[ $num =~ \d+ ]]; then         echo "No celebrating!";     else         echo "\$num is '$num'. Is this actually a value?";     fi; }
+ 1283  type iffy
+ 1284  iffy 1
+ 1285  /tmp/1.sh 
+ 1286  [[ 5 ~= [0-9] ]]; echo $?
+ 1287  [[ 5 =~ [0-9] ]]; echo $?
+ 1288  [[ 5 =~ \d ]]; echo $?
+ 1289  [[ 5 =~ \\d ]]; echo $?
+ 1290  /tmp/1.sh 
+ 1291  pwd
+ 1292  for f in .*; do echo $f; done
+ 1293  ll scripts
+ 1294  ll scripts/
+ 1295  ll /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-05-examples.sh
+ 1296  ll /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1297  iffy
+ 1298  iffy abc
+ 1299  set -x
+ 1300  iffy abc
+ 1301  set +x
+ 1302  iffy abc
+ 1303  ./scripts
+ 1304  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1305  ll
+ 1306  ./2024-10-15-examples.sh 
+ 1307  iffy 15
+ 1308  . ./2024-10-15-examples.sh 
+ 1309  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1310  . ./2024-10-15-examples.sh 
+ 1311  iffy 12
+ 1312  set -x
+ 1313  iffy 12
+ 1314  . ./2024-10-15-examples.sh 
+ 1315  set +x
+ 1316  ll
+ 1317  . ./2024-10-15-examples.sh 
+ 1318  iffy 12
+ 1319  iffy 1
+ 1320  iffy 
+ 1321  iffy abc
+ 1322  . ./2024-10-15-examples.sh 
+ 1323  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1324  . ./2024-10-15-examples.sh 
+ 1325  iffy
+ 1326  man mktemp
+ 1327  mkdir --help
+ 1328  tldr mktemp
+ 1329  mktemp --help
+ 1330  touch /tmp/1.txt
+ 1331  vim /tmp/1.sh
+ 1332  vim /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-15-examples.sh 
+ 1333  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1334  ./2024-10-15-examples.sh 
+ 1335  ll /tmp/tmp.SCn1lTBn2e/
+ 1336  $td=$(mktemp -d)
+ 1337  td=$(mktemp -d)
+ 1338  cd $td
+ 1339  touch "$td/{01..10}.txt"
+ 1340  ll
+ 1341  rm \{01..10\}.txt 
+ 1342  rm \${01..10\}.txt 
+ 1343  touch "$td/${01..10}.txt"
+ 1344  echo {01..10}
+ 1345  touch {01..10}
+ 1346  ll
+ 1347  rm *
+ 1348  ll
+ 1349  touch abc{01..10}.txt
+ 1350  ll
+ 1351  rm *.txt
+ 1352  rm "$td\abc{01..10}.txt"
+ 1353  touch "$td\abc{01..10}.txt"
+ 1354  ll
+ 1355  touch "$td\abc{01..10}.txt"
+ 1356  ll
+ 1357  ll $tmp
+ 1358  touch "$td\abc${01..10}.txt"
+ 1359  touch "$td\abc$({01..10}).txt"
+ 1360  man bash
+ 1361  touch "$td\abc"{01..10}".txt"
+ 1362  dir
+ 1363  ll
+ 1364  echo $td
+ 1365  pwd
+ 1366  cat /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json 
+ 1367  jq -s 'map(keys)' /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json 
+ 1368  jq -s 'map(keys) | add | unique' /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json n
+ 1369  jq -s 'map(keys) | add | unique' /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json
+ 1370  jq -s 'map(keys) | add | unique' /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json | clip.exe
+ 1371  head /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json --lines=2
+ 1372  ln -s /mnt/c/temp/files/pinboard_export.2024.10.06_21.18.json myfile.json
+ 1373  jq -s 'map(keys) | add | unique' myfile.json 
+ 1374  jq -s 'map(keys) | add | unique'
+ 1375  jq -s 'map(keys) | add | unique' myfile.json
+ 1376  jq -s 'map(keys) | add | unique | .[]' myfile.json
+ 1377  jq -s 'map(keys) | add | unique' myfile.json
+ 1378  jq -s '[.[][] | keys] | add | unique' myfile.json
+ 1379  ll myfile
+ 1380  dir myfile
+ 1381  dir
+ 1382  dir myfile.json 
+ 1383  ll
+ 1384  ll -L myfile.json 
+ 1385  vim myfile.json 
+ 1386  code myfile.json 
+ 1387  jq -s '[.[][] | keys] | add | unique' myfile.json
+ 1388  jq -s '[.[] | keys] | add | unique' myfile.json
+ 1389  jq -s '[.[][] | keys] | add | unique' myfile.json
+ 1390  jq -s '[.[][*] | keys] | add | unique' myfile.json
+ 1391  jq -s '[.[][2] | keys] | add | unique' myfile.json
+ 1392  jq -s '[.[][1] | keys] | add | unique' myfile.json
+ 1393  jq -s '[.[][4] | keys] | add | unique' myfile.json
+ 1394  jq -s '[.[][-4] | keys] | add | unique' myfile.json
+ 1395  jq -s '[.[]["Alfred"] | keys] | add | unique' myfile.json
+ 1396  jq -s '[.[*] | keys] | add | unique' myfile.json
+ 1397  jq -s '[.[][] | keys] | add | unique' myfile.json
+ 1398  jq -s '[.[*][] | keys] | add | unique' myfile.json
+ 1399  jq -s '[.[*][*] | keys] | add | unique' myfile.json
+ 1400  jq -s '[.[][*] | keys] | add | unique' myfile.json
+ 1401  jq -s '[.[] | keys] | add | unique' myfile.json
+ 1402  jq -s '[.[] | keys[1]] | add | unique' myfile.json
+ 1403  jq -s '[.[] | keys[][2]] | add | unique' myfile.json
+ 1404  jq -s '[.[] | keys[][0]] | add | unique' myfile.json
+ 1405  jq -s '[.[][0] | keys] | add | unique' myfile.json
+ 1406  jq -s '[.[0] | keys] | add | unique' myfile.json
+ 1407  jq -s '[.[3] | keys] | add | unique' myfile.json
+ 1408  jq -s '[.[2] | keys] | add | unique' myfile.json
+ 1409  jq -s '[.[1] | keys] | add | unique' myfile.json
+ 1410  jq -s '[.[`] | keys] | add | unique' myfile.json
+ 1411  jq -s '[.[1] | keys] | add | unique' myfile.json
+ 1412  jq -s '[.[1]]
+ 1413  jq -s '[.[1]]'
+ 1414  jq -s '[.[1]]' myfile.json 
+ 1415  jq -s '[.[]]' myfile.json 
+ 1416  jq -s '[.[][]]' myfile.json 
+ 1417  jq -s '[.[]]' myfile.json 
+ 1418  jq -s '[.[][]]' myfile.json 
+ 1419  jq -s '[.[][] | keys] | add | unique' myfile.json
+ 1420  jq -s 'def keys_recursive: . as $in | (paths(scalars) | map(tostring) | join(".")) as $path | [$path, $in | getpath($path | split(".")) | type] | select(.[1] == "object") | .[0]; map(keys_recursive) | add | unique' myfile.json
+ 1421  jq -r '. as $data | def recurse($obj) {
+ 1422      if type($obj) == "object" then
+ 1423          reduce keys($obj) as $key ([]) (
+ 1424              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1425              else [. + $key] end
+ 1426          )
+ 1427      else
+ 1428          []
+ 1429      end
+ 1430  }; recurse($data)' myfile.json
+ 1431  jq -r '. as $data | def recurse($obj) {
+ 1432      if type($obj) == "object" then
+ 1433          reduce keys($obj) as $key ([]) (
+ 1434              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1435              else [. + $key] end
+ 1436          )
+ 1437      else
+ 1438          []
+ 1439      end
+ 1440  }; recurse($data)' myfile.json
+ 1441  jq -r '.'
+ 1442  jq -r '. as $data 
+ 1443  jq -r '. as $data | def recurse($obj) {
+ 1444      if type($obj) == "object" then
+ 1445          reduce keys($obj) as $key ([]) (
+ 1446              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1447              else [. + $key] end
+ 1448          )
+ 1449      else
+ 1450          []
+ 1451      end
+ 1452  }; recurse($data)' myfile.json
+ 1453  jq -r '. as $data | def recurse($obj) {
+ 1454      if type($obj) == "object" then
+ 1455          reduce keys($obj) as $key ([]) (
+ 1456              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1457              else [. + $key] end
+ 1458          )
+ 1459      else
+ 1460          []
+ 1461      end
+ 1462  }; recurse($data)' myfile.json
+ 1463  jq -r '. as $data | def recurse($obj) {
+ 1464      if type($obj) == "object" then
+ 1465          reduce keys($obj) as $key ([]) (
+ 1466              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1467              else [. + $key] end
+ 1468          )
+ 1469      else
+ 1470          []
+ 1471      end
+ 1472  }; recurse($data)' myfile.json
+ 1473  jq -r '. as $data | def recurse($obj) {
+ 1474      if type($obj) == "object" then
+ 1475          reduce keys($obj) as $key ([]) (
+ 1476              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1477              else [. + $key] end
+ 1478          )
+ 1479      else
+ 1480          []
+ 1481      end
+ 1482  }; recurse($data)' myfile.json
+ 1483  jq -r '. as $data | def recurse($obj): {
+ 1484      if type($obj) == "object" then
+ 1485          reduce keys($obj) as $key ([]) (
+ 1486              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1487              else [. + $key] end
+ 1488          )
+ 1489      else
+ 1490          []
+ 1491      end
+ 1492  }; recurse($data)' myfile.json
+ 1493  jq -r '. as $data | def recurse($obj) {
+ 1494      if type($obj) == "object" then
+ 1495          reduce keys($obj) as $key ([]) (
+ 1496              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1497              else [. + $key] end
+ 1498          )
+ 1499      else
+ 1500          []
+ 1501      end
+ 1502  }; recurse($data)' myfile.json
+ 1503  jq -r '. as $data | def recurse($obj) {
+ 1504      if type($obj) == "object" then
+ 1505          reduce keys($obj) as $key ([]) (
+ 1506              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1507              else [. + $key] end
+ 1508          )
+ 1509      else
+ 1510          []
+ 1511      end
+ 1512  }; recurse($data)' myfile.json
+ 1513  jq -r '. as $data | def recurse($obj): {
+ 1514      if type($obj) == "object" then
+ 1515          reduce keys($obj) as $key ([]) (
+ 1516              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1517              else [. + $key] end
+ 1518          )
+ 1519      else
+ 1520          []
+ 1521      end
+ 1522  }; recurse($data)' myfile.json
+ 1523  jq -r '. as $data | def recurse($obj) {
+ 1524      if type($obj) == "object" then
+ 1525          reduce keys($obj) as $key ([]) (
+ 1526              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1527              else [. + $key] end
+ 1528          )
+ 1529      else
+ 1530          []
+ 1531      end
+ 1532  }; recurse($data)' your_json_file.json
+ 1533  jq -r '. as $data | def recurse($obj): {
+ 1534      if type($obj) == "object" then
+ 1535          reduce keys($obj) as $key ([]) (
+ 1536              if type($obj[$key]) == "object" then recurse($obj[$key])
+ 1537              else [. + $key] end
+ 1538          )
+ 1539      else
+ 1540          []
+ 1541      end
+ 1542  }; recurse($data)' myfile.json
+ 1543  function() ann {
+ 1544  function ann() {     type $1;     }
+ 1545  ann iffy
+ 1546  ann ls
+ 1547  ann --help
+ 1548  echo $td
+ 1549  touch "$td/temp{01..10}.txt"
+ 1550  ll
+ 1551  touch "$td"/temp{01..10}.txt
+ 1552  ll
+ 1553  echo "{1..10}"
+ 1554  echo {1..10}
+ 1555  cd ..
+ 1556  ls -latr
+ 1557  ls -latrd */
+ 1558  ll tmp.*
+ 1559  ls -latrd */
+ 1560  rm -rf tmp.*/
+ 1561  ls -latrd */
+ 1562  pwd
+ 1563  cd
+ 1564  cd scripts
+ 1565  ln -s /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-15-examples.sh 
+ 1566  ll
+ 1567  rm 2024-10-15-examples.sh 
+ 1568  ln -s /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-15-examples.sh current.sh
+ 1569  ll
+ 1570  string dc1.cleonard.keytab 
+ 1571  strings dc1.cleonard.keytab 
+ 1572  view dc1.cleonard.keytab 
+ 1573  /mnt/c/util/epp.ps1 dc1.cleonard.keytab
+ 1574  vim dc1.cleonard.keytab 
+ 1575  man -k hex
+ 1576  cat dc1.cleonard.keytab | xxd
+ 1577  which ls
+ 1578  file $(which ls)
+ 1579  strings $(which ls)
+ 1580  strings $(which ls)|more
+ 1581  ldd $(which ls)
+ 1582  ./current.sh 
+ 1583  [[ 0 -in 1,3,5 ]]; echo $?
+ 1584  man bash
+ 1585  vim indent.sh
+ 1586  ll
+ 1587  chmod 755 *.sh
+ 1588  ./indent.sh 
+ 1589  demo ls
+ 1590  ./indent.sh ls
+ 1591  . ./indent.sh 
+ 1592  demo ls
+ 1593  demo iffy 1
+ 1594  ls
+ 1595  demo ls -al
+ 1596  mv indent.sh teaching-utils.sh
+ 1597  vim teaching-utils.sh 
+ 1598  ll
+ 1599  pwd
+ 1600  ll -latr
+ 1601  . ./teaching-utils
+ 1602  . ./teaching-utils.sh 
+ 1603  demo ls
+ 1604  exit
+ 1605  ln -s /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-15-examples.sh ./current.sh
+ 1606  ./current.sh 
+ 1607  cd ../../cdc-2024
+ 1608  cd src/filter_files/
+ 1609  ll
+ 1610  grep -rHinE column
+ 1611  grep -rHinEl column
+ 1612  grep -rHinEl column | xargs vim
+ 1613  for f in grep -rHinEl column; do vim $f; done
+ 1614  for f in $(grep -rHinEl column); do vim $f; done
+ 1615  newname=Christopher
+ 1616  echo $newname 
+ 1617  echo ${newname} 
+ 1618  echo ${#newname} 
+ 1619  printf ${#newname} 
+ 1620  printf {1,${#newname}}
+ 1621  printf {1..${#newname}}
+ 1622  abc=11
+ 1623  {1,$abc}
+ 1624  echo {1..abc}
+ 1625  echo {1..$abc}
+ 1626  echo $({1..$abc})
+ 1627  printf "%0.s'Hello\!'" {1..4}
+ 1628  printf "%0.s'Hello\\!'" {1..4}
+ 1629  printf "%0.s'Hello'" {1..4}
+ 1630  printf "%0.s'Hello'\n" {1..4}
+ 1631  printf "%0.s'Hello\!'\n" {1..4}
+ 1632  printf "%0.s'Hello\\!'\n" {1..4}
+ 1633  printf '%0.sHello!\n' {1..4}
+ 1634  man bash
+ 1635  which prettier
+ 1636  exit
+ 1637  ps
+ 1638  ps -U chris
+ 1639  echo $$
+ 1640  ps -aux
+ 1641  ps -ef | grep pts
+ 1642  man type
+ 1643  type --help
+ 1644  type iffy
+ 1645  iff
+ 1646  iffy
+ 1647  touch /tmp/1.txt
+ 1648  cat /tmp/1.txt 
+ 1649  seq 10
+ 1650  seq 1 10
+ 1651  touch /tmp/tmp$(seq1 10).txt
+ 1652  touch /tmp/tmp$(seq 1 10).txt
+ 1653  ll -latr /tmp
+ 1654  man bash
+ 1655  touch /tmp/temporary{1..10}.txt
+ 1656  ls -latr /tmp
+ 1657  touch /tmp/temporary{a..z}.txt
+ 1658  ll /tmp/ -latr
+ 1659  man bash
+ 1660  touch /tmp/temporary{aa..zzz}.txt
+ 1661  ls -latr
+ 1662  ls -latr /tmp
+ 1663  touch /tmp/temporary{00..10}.txt
+ 1664  ls -latr /tmp
+ 1665  kill vim
+ 1666  killall vim
+ 1667  ps -f -U chris
+ 1668  kill 17899
+ 1669  kill -9 17899
+ 1670  ps -f -U chris
+ 1671  cd /mnt/c
+ 1672  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1673  ll
+ 1674  ./2024-10-15-examples.sh 
+ 1675  ll
+ 1676  vim 2024-10-15-examples.sh 
+ 1677  iffy
+ 1678  ./2024-10-05-examples.sh 
+ 1679  man case
+ 1680  help case
+ 1681  man select
+ 1682  help select
+ 1683  select caveperson in ("fred" "wilma" "pebbles" "barney" "betty" "bam-bam")
+ 1684  select caveperson in ("fred" "wilma" "pebbles" "barney" "betty" "bam-bam"); do
+ 1685  select caveperson in "fred" "wilma" "pebbles" "barney" "betty" "bam-bam"; do echo "hello caveperson"; done
+ 1686  select caveperson in "fred" "wilma" "pebbles" "barney" "betty" "bam-bam" "bye-bye"; do    if [[ $caveperson == "bye-bye" ]]; then     echo "bye";   else     echo "hello, $caveperson";   fi; done
+ 1687  select caveperson in "fred" "wilma" "pebbles" "barney" "betty" "bam-bam" "bye-bye"; do    if [[ $caveperson == "bye-bye" ]]; then     echo "bye"; break;  else     echo "hello, $caveperson";   fi; done
+ 1688  ll
+ 1689  ll -L current.sh 
+ 1690  rm current.sh 
+ 1691  ln -ls /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-05-examples.sh 
+ 1692  ln -s /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/2024-10-05-examples.sh ./current.sh
+ 1693  ./current.sh 
+ 1694  1
+ 1695  ./current.sh 
+ 1696  npm install prettier -D --save-exact
+ 1697  which prettier
+ 1698  ./current.sh 
+ 1699  popd
+ 1700  ./2024-10-05-examples-after-shellcheck.sh 
+ 1701  clear
+ 1702  ./2024-10-05-examples-after-shellcheck.sh 
+ 1703  man bash
+ 1704  tldr select
+ 1705  man bash index-select
+ 1706  ./2024-10-05-examples.sh 
+ 1707  ./2024-10-05-examples-after-shellcheck.sh 
+ 1708  get-command *bit*lock*
+ 1709  get-command *bit*
+ 1710  get-command *bi*
+ 1711  exit
+ 1712  [[ "ab" -lt "aaa" ]]; echo $?
+ 1713  [[ "ab" -lt "zaa" ]]; echo $?
+ 1714  cd scripts
+ 1715  ./current.sh 
+ 1716  more ./current.sh 
+ 1717  ./current.sh 
+ 1718  function demo() {
+ 1719  function indent() {   sed 's/^/    /'; }
+ 1720  echo ~/.bashrc|indent
+ 1721  cat ~/.bashrc|indent
+ 1722  type demo
+ 1723  function demo() {   to_demo=%1;   echo "";   echo "About to demo '"%1".
+ 1724    type "%1"
+ 1725    to_demo
+ 1726  +
+ 1727  }
+ 1728  function demo() { cmdline="%0"; executable="%1"; echo $cmdline; echo $executable; }
+ 1729  demo a b c d
+ 1730  function demo() { cmdline="$0"; executable="$1"; echo $cmdline; echo $executable; }
+ 1731  demo a b c d
+ 1732  function demo() { cmdline="$*"; executable="$1"; echo $cmdline; echo $executable; }
+ 1733  demo a b c d
+ 1734  function demo() { executable="$1"; demo="$*"; echo "--------------"; type executable; echo "--------------"; cmdline; }
+ 1735  function demo() { executable="$1"; cmdline="$*"; echo "--------------"; type executable; echo "--------------"; cmdline; }
+ 1736  ps -U chris
+ 1737  demo ps -U chris
+ 1738  function demo() { executable="$1"; cmdline="$*"; echo "--------------"; type executable; echo "--------------"; $cmdline; }
+ 1739  demo ps -U chris
+ 1740  function demo() { executable="$1"; cmdline="$*"; echo "--------------"; type "$executable"; echo "--------------"; "$cmdline"; }
+ 1741  demo ps -U chris
+ 1742  function demo() { executable="$1"; cmdline="$*"; echo "--------------"; type "$executable"; echo "--------------"; $cmdline; }
+ 1743  demo ps -U chris
+ 1744  demo demo demo
+ 1745  function demo() { executable="$1"; cmdline="$*"; echo "--------------"; type "$executable" | indent; echo "--------------"; $cmdline | indent; }
+ 1746  demo ps -U chris
+ 1747  type indent
+ 1748  function id() {     sed 's/^/    /'; }
+ 1749  ll
+ 1750  ll | id
+ 1751  fortune
+ 1752  fortune|id
+ 1753  ll | id
+ 1754  type indent
+ 1755  type demo
+ 1756  echo "3" * 4
+ 1757  man bash
+ 1758  printf "123"
+ 1759  printf "123\n"
+ 1760  while read /etc/passed; do printf; done
+ 1761  while read /etc/passwd; do printf; done
+ 1762  while read /etc/passwd -r line; do printf $line; done
+ 1763  while read -r line; do printf $line; done < /etc/passwd
+ 1764  while read -r line; do printf $line\n; done < /etc/passwd
+ 1765  while read -r line; do printf {$line\n}; done < /etc/passwd
+ 1766  while read -r line; do printf "$line\n"; done < /etc/passwd
+ 1767  while read -r line; do printf "$line\n" {1,3}; done < /etc/passwd
+ 1768  while read -r line; do printf "%0.s$line\n" {1,3}; done < /etc/passwd
+ 1769  while read -r line; do printf "%0.s$line\n" {1..3}; done < /etc/passwd
+ 1770  while read -r line; do printf "$line\n" {1..3}; done < /etc/passwd
+ 1771  while read -r line; do printf "%0.s$line\n" {1..3}; done < /etc/passwd
+ 1772  while read -r line; do printf "%0100.s$line\n" {1..3}; done < /etc/passwd
+ 1773  while read -r line; do printf "%01.s$line\n" {1..3}; done < /etc/passwd
+ 1774  while read -r line; do printf "%20.s$line\n" {1..3}; done < /etc/passwd
+ 1775  while read -r line; do printf "%2.s$line\n" {1..3}; done < /etc/passwd
+ 1776  while read -r line; do printf "%1.s$line\n" {1..3}; done < /etc/passwd
+ 1777  while read -r line; do printf "%1.s$line\n" {0..3}; done < /etc/passwd
+ 1778  while read -r line; do printf "%0.s$line\n" {0..3}; done < /etc/passwd
+ 1779  while read -r line; do printf "%0$line\n" {0..3}; done < /etc/passw
+ 1780  while read -r line; do printf "%0.s$line\n" {1..3}; done < /etc/passwd
+ 1781  while read -r line; do printf "%0$line\n" {1..3}; done < /etc/passwd
+ 1782  man printf
+ 1783  man bash
+ 1784  printf '%0.sThe duck is very very dead. {1,3]'
+ 1785  printf '%0.sThe duck is very very dead. {1..3]'
+ 1786  printf "%0.sThe duck is very very dead. {1..3]"
+ 1787  while read -r line; do printf "%0$line\n" {1..3}; do
+ 1788  printf "%0.sThe duck is very very dead." {1..3]
+ 1789  printf "%0'My duck is pretty dead, actually.'\n" {1..3}
+ 1790  printf "%0.s"My duck is pretty dead, actually."\n" {1..3}
+ 1791  printf "%0.s'My duck is pretty dead, actually.'\n" {1..3}
+ 1792  ls 
+ 1793  ls add-todo-entry.sh {1..3}
+ 1794  printf "%0is interesting.\n" I
+ 1795  printf "%0.s'My duck is pretty dead, actually.'\n" {1..3}
+ 1796  printf "%0.1'My duck is pretty dead, actually.'\n" {1..3}
+ 1797  printf "%0.6'My duck is pretty dead, actually.'\n" {1..3}
+ 1798  printf "%0'My duck is pretty dead, actually.'\n" {1..3}
+ 1799  printf "%0.'My duck is pretty dead, actually.'\n" {1..3}
+ 1800  printf "%0'My duck is pretty dead, actually.'\n" {1..3}
+ 1801  printf "%0.6'My duck is pretty dead, actually.'\n" {1..3}
+ 1802  printf "%0.s'My duck is pretty dead, actually.'\n" {1..3}
+ 1803  type code
+ 1804  type demo
+ 1805  type indent
+ 1806  function indent() {     sed '/^/ {"$1"}/'; }
+ 1807  echo "abc" | indent
+ 1808  echo "abc" | indent 4
+ 1809  function indent() {     sed "/^/ {$1}/"; }
+ 1810  echo "abc" | indent 4
+ 1811  function indent() {     sed "/^/ \{\$1\}/"; }
+ 1812  echo "abc" | indent 4
+ 1813  type demo
+ 1814  iffy
+ 1815  demo ls
+ 1816  demo
+ 1817  demo ls
+ 1818  demo demo
+ 1819  ll
+ 1820  ll demo
+ 1821  dir current.sh 
+ 1822  ./current.sh
+ 1823  ll -Lal ./current.sh
+ 1824  ll -Lal ./current.sh 
+ 1825  rm current.sh 
+ 1826  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/meeting-notes/
+ 1827  ll
+ 1828  ./current
+ 1829  ./current.sh 
+ 1830  demo ls
+ 1831  type indent
+ 1832  ls | indent
+ 1833  unset indent
+ 1834  ls | indent
+ 1835  ./current.sh 
+ 1836  ls | indent
+ 1837  function indent () {     sed 's/^/    /'; }
+ 1838  ls | indent
+ 1839  ./current.sh 
+ 1840  npm install prettier -D --save-exact
+ 1841                  echo "Invalid option selected. Please try again."
+ 1842  ./2024-10-05-examples.sh 
+ 1843  ll /tmp/tmp.BJ2Mt1Zelc/
+ 1844  type globby
+ 1845  globby () {     glob="$1";     for f in "$glob";     do         echo "I found a text file named $f.";     done; }
+ 1846  globby "/tmp/tmp.BJ2Mt1Zelc/*.txt"
+ 1847  globby /tmp/tmp.BJ2Mt1Zelc/*.txt
+ 1848  ll /tmp/tmp.BJ2Mt1Zelc/*.txt
+ 1849  for f in "/tmp/tmp.BJ2Mt1Zelc/*.txt"; do  echo $f; done
+ 1850  for f in /tmp/tmp.BJ2Mt1Zelc/*.txt; do  echo $f; done
+ 1851  globby /tmp/tmp.BJ2Mt1Zelc/*.txt
+ 1852  echo $glob
+ 1853  gl="/tmp/tmp.BJ2Mt1Zelc/*.txt"
+ 1854  echo $gl
+ 1855  for f in $gl; do echo "i found $f"; done
+ 1856  for f in "$gl"; do echo "i found $f"; done
+ 1857  echo $gl
+ 1858  echo "$gl"
+ 1859  echo -e "$gl"
+ 1860  echo $gl
+ 1861  echo "$gl"
+ 1862  echo "${gl}"
+ 1863  type demo
+ 1864  demo ls
+ 1865  demo df -h
+ 1866  demo indent $(echo /etc/passwd)
+ 1867  jobs
+ 1868  fg
+ 1869  jobs
+ 1870  type indent
+ 1871  demo indent</etc/passwd
+ 1872  demo cat /etc/passwd|indent
+ 1873  ./2024-10-05-examples.sh 
+ 1874  $i=1
+ 1875  i=1
+ 1876  i=(($i-1))
+ 1877  i=((i-1))
+ 1878  i=$((i-1))
+ 1879  echo $i
+ 1880  ./2024-10-05-examples-after-shellcheck.sh 
+ 1881  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then     else
+ 1882          echo "\$num is '$num', which is not an integer."
+ 1883          echo "Y U NO GIVE ME AN INTEGER?"
+ 1884      fi
+ 1885  }
+ 1886  clear
+ 1887  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then     else
+ 1888          echo "\$num is '$num', which is not an integer."
+ 1889          echo "Y U NO GIVE ME AN INTEGER?"
+ 1890  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then     else
+ 1891          echo "\$num is '$num', which is not an integer."
+ 1892          echo "Y U NO GIVE ME AN INTEGER?"
+ 1893      fi
+ 1894  }
+ 1895  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then     else
+ 1896  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then     else
+ 1897          echo "\$num is ""$num"", which is not an integer."
+ 1898          echo "Y U NO GIVE ME AN INTEGER?"
+ 1899      fi
+ 1900  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then
+ 1901  function iffy() {     local num="$1"     if [[ $num -eq "0" ]]; then         echo "\$num is the very special integer 0!";     elif [[ $num =~ [+-]?[0-9]+ ]]; then         echo "\$num is "$num"\!, which is a non-zero integer.";     else         echo "\$num is "$num", which is not an integer.";         echo "Y U NO GIVE ME AN INTEGER?";     fi; }
+ 1902  iffy b
+ 1903  num=
+ 1904  [[ $num=="" ]]; $?
+ 1905  [[ $num=="" ]]; echo $?
+ 1906  [[ $num=="x" ]]; echo $?
+ 1907  [[ $num=="1" ]]; echo $?
+ 1908  echo $num
+ 1909  [[ -z $num ]]
+ 1910  [[ -z $num ]]; echo $?
+ 1911  [[ -n $num ]]; echo $?
+ 1912  [[ $num =~ [+-]?\d+ ]]|echo $?
+ 1913  [[ "" =~ [+-]?\d+ ]]|echo $?
+ 1914  [[ "" =~ [+-]?[0-9]+ ]]|echo $?
+ 1915  [[ "x" =~ [+-]?[0-9]+ ]]|echo $?
+ 1916  [[ "asdiuhpsaidfh" =~ [+-]?[0-9]+ ]]|echo $?
+ 1917  [[ "12" =~ [+-]?[0-9]+ ]]|echo $?
+ 1918  [[ "12" ~= [+-]?[0-9]+ ]]|echo $?
+ 1919  [[ 12 =~ [+-]?[0-9]+ ]]|echo $?
+ 1920  [[ $num =~ [+-]?[0-9]+ ]]|echo $?
+ 1921  [[ 12345 =~ [+-]?[0-9]+ ]]|echo $?
+ 1922  [[ 12 =~ [+-]?[0-9]+ ]]|echo $?
+ 1923  [[ "12" ~= [+-]?[0-9]+ ]]|echo $?
+ 1924  [[ 12 =~ [+-]?[0-9]+ ]]|echo $?
+ 1925  [[ 12 =~ ^-?[0-9]+$ ]]
+ 1926  [[ 12 =~ ^-?[0-9]+$ ]]; echo $?
+ 1927  [[ 12x =~ ^-?[0-9]+$ ]]; echo $?
+ 1928  [[ 12 =~ ^[+-]?[0-9]+$ ]]|echo $?
+ 1929  [[ 1x2 =~ ^[+-]?[0-9]+$ ]]|echo $?
+ 1930  [[ 12x =~ ^[+-]?[0-9]+$ ]]|echo $?
+ 1931  [[ 12x =~ ^-?[0-9]+$ ]]|echo $?
+ 1932  [[ 12x =~ ^-?[0-9]+$ ]];echo $?
+ 1933  [[ 12x =~ ^[+-]?[0-9]+$ ]];echo $?
+ 1934  [[ 12 =~ ^[+-]?[0-9]+$ ]];echo $?
+ 1935  [[ $num =~ ^[+-]?[0-9]+$ ]];echo $?
+ 1936  echo ${#num}
+ 1937  ./2024-10-05-examples-after-shellcheck.sh 
+ 1938  man select
+ 1939  man bash
+ 1940  PS3=pfft select r in "a b c d e"; do
+ 1941  PS3=pfft select r in a b c d e; do
+ 1942  PS3=pfft select r in (a b c d e); do
+ 1943  PS3=pfft select r in "(a b c d e)"; do
+ 1944  PS3=pfft select r in ("a" "b" "c" "d" "e"); do
+ 1945  PS3=pfft select r in $("a" "b" "c" "d" "e"); do
+ 1946  for r in 1 2 3; do echo $r; done
+ 1947  select r in 1 2 3; do echo r; break; done
+ 1948  select r in 1 2 3; do echo r; echo $REPLY; break; done
+ 1949  select r in 1 2 3; do echo $r; echo $REPLY; break; done
+ 1950  PS3 = yip select r in 1 2 3; do echo $r; echo $REPLY; break; done
+ 1951  PS3 = yip; select r in 1 2 3; do echo $r; echo $REPLY; break; done
+ 1952  PS3=yip select r in 1 2 3; do echo $r; echo $REPLY; break; done
+ 1953  PS3=yip; select r in 1 2 3; do echo $r; echo $REPLY; break; done
+ 1954  echo $PS3
+ 1955  dmeo
+ 1956  demo
+ 1957  type demo
+ 1958  function indent () {     local text_to_indent="$1"
+ 1959      sed 's/^/    /' <<< "$text_to_indent"; }
+ 1960  indent "abc\ndef\nasdf\n          123"
+ 1961  x="abc\ndef\nasdf\n          123"
+ 1962  indent x
+ 1963  indent $x
+ 1964  indent "$x"
+ 1965  x="abc\ndef\nasdf\n    
+ 1966  echo $x
+ 1967  echo -e $x
+ 1968  indent $x
+ 1969  indent $(echo -e $x)
+ 1970  type echo
+ 1971  type indent
+ 1972  function indent () {     local text_to_indent="$1"
+ 1973      sed 's/^/    /' <<< $text_to_indent; }
+ 1974  type indent
+ 1975  indent $x
+ 1976  indent $(echo -e $x)
+ 1977  echo -e $x
+ 1978  echo -e $x|indent
+ 1979  indent ls
+ 1980  ls | indent
+ 1981  function indent () {     sed 's/^/    /'; }
+ 1982  ls | indent
+ 1983  type demo
+ 1984  python
+ 1985  dig e.gg
+ 1986  whois e.gg
+ 1987  nslookup e.gg
+ 1988  nslookup databaseguy.com
+ 1989  dig gg
+ 1990  dig gg.
+ 1991  dig com
+ 1992  dig com.
+ 1993  dig yahoo.com
+ 1994  dig com.
+ 1995  nslookup com
+ 1996  dig -t=NS com
+ 1997  dig -t NS com
+ 1998  get-command *bit*lock*
+ 1999  help set
+ 2000  help env|more
+ 2001  man env
+ 2002  man bash
+ 2003  export cardigan=sweater
+ 2004  echo $cardigan 
+ 2005  bash
+ 2006  echo $cardigan 
+ 2007  set|grep card
+ 2008  env|grep card
+ 2009  export my_envvar=10
+ 2010  echo $my_envvar 
+ 2011  set|grep my_envvar
+ 2012  env|grep my_envvar
+ 2013  echo $my_envvar 
+ 2014  bash
+ 2015  echo $my_envvar 
+ 2016  bash
+ 2017  echo $my_envvar 
+ 2018  unset $my_envvar
+ 2019  clear
+ 2020  meep=100
+ 2021  export $meep
+ 2022  export meep
+ 2023  moon_of_jupiter="Europa"
+ 2024  echo "NASA's newly-launched space probe should visit $moon_of_jupiter in 2026."
+ 2025  year_of_arrival=2030
+ 2026  echo "NASA's Europa Clipper is expected to reach the Jupiter system in $year_of_arrival."
+ 2027  $ first_name=Chris
+ 2028  $ export first_name
+ 2029  $ # create and export a variable with one command:
+ 2030  $ export last_name=Leonard
+ 2031  $ first_name=Chris
+ 2032  $ export first_name
+ 2033  $ # create and export a variable with one command:
+ 2034  $ export last_name=Leonard
+ 2035  first_name=Chris
+ 2036  export first_name
+ 2037  export last_name=Leonard
+ 2038  echo "Hello, $first_name, $last_name!"
+ 2039  undef --help
+ 2040  unset --help
+ 2041  man unset
+ 2042  info unset
+ 2043  env|grep first_name
+ 2044  var
+ 2045  set|grep first_name
+ 2046  unset -v first_name
+ 2047  env|grep first_name
+ 2048  set|grep first_name
+ 2049  type last_name
+ 2050  env|grep _name
+ 2051  set|grep _name
+ 2052  set|grep last_name
+ 2053  env|grep last_name
+ 2054  last_name=
+ 2055  env|grep last_name
+ 2056  set|grep last_name
+ 2057  echo $apsorifjqpwoe
+ 2058  set|grep apsodifjaspdofij
+ 2059  function search-bad() { echo "bad"; }
+ 2060  search-bad 
+ 2061  function history { echo "hi"; }
+ 2062  history
+ 2063  unset history
+ 2064  history
+ 2065  man mktemp
+ 2066  history|more
+ 2067  history|grep ssh
+ 2068  history grep env
+ 2069  history |grep env
+ 2070  history|wc
+ 2071  history | uniq | wc
+ 2072  history | sort --unique |wc
+ 2073  history | awk ' { $1=""; print $0 } '
+ 2074  history | awk ' { $1=""; print $0 } ' | wc
+ 2075  history | awk ' { $1=""; print $0 } ' | uniq | wc
+ 2076  history | awk ' { $1=""; print $0 } ' | sort --unique | wc
+ 2077  history | grep set
+ 2078  history
+ 2079  history|more
+ 2080  history | grep name
+ 2081  history | grep name|wc
+ 2082  cd documents/git/github.com/sql-sith/cdc-2025/src/2024-09028
+ 2083  cd /mnt/c/Users/chris/Documents/git/github.com/sql-sith/cdc-2025/src/demos/2024-09-28/
+ 2084  ll
+ 2085  ll ~/scripts
+ 2086  ll -L ~/scripts
+ 2087  grep dir ~/scripts/*
+ 2088  grep BASH_SOURCE ~/scripts
+ 2089  grep BASH_SOURCE ~/scripts/*
+ 2090  echo $(dirname "${BASH_SOURCE[0]}"))
+ 2091  echo $(dirname "${BASH_SOURCE[0]}")
+ 2092  dirname .
+ 2093  ll
+ 2094  history > ./fake-history.txt
