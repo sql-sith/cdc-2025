@@ -47,7 +47,7 @@ function history {
 ###############################################
 function search-history-bad() {
     # this function assumes that the search_term is always at the beginning of
-    # beginning of the history line, so it searches for the search_term plus
+    # the command line in the history, so it searches for the search_term plus
     # any characters after it.
     #
     # this will get rid of the history line number, as required but it will not
@@ -56,7 +56,7 @@ function search-history-bad() {
     # reported as 'search_string' and 'cp search_string /tmp' will be reported
     # as 'search_string /tmp'.
     local search_term="${1}.*"
-    history | grep -E --only-matching "$search_term" | head --lines=50
+    history | grep -E --only-matching "$search_term"
 }
 
 function search-history-good {
@@ -69,7 +69,7 @@ function search-history-good {
     # of its output, this function will break. it would be better to use a more 
     # robust solution.
     local search_term=$1
-    history | grep "$search_term" | head --lines=50 | cut --characters=8-
+    history | grep "$search_term" | cut --characters=8-
 }
 
 function search-history-robust {
@@ -81,7 +81,7 @@ function search-history-robust {
     # first field. by setting $1 to an empty string, we effectively remove the first
     # field from each line.
     local search_term=$1
-    history | grep "$search_term" | head --lines=50 | awk ' { $1=""; print $0 } '
+    history | grep "$search_term" | awk ' { $1=""; print $0 } '
 }
 
 function demo-function {
