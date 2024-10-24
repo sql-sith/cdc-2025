@@ -4,13 +4,13 @@
 
 # Discuss https://www.shellcheck.net/ and its VSCode extension
 
-####################
-### shell options:
-####################
+##################
+# shell options:
+##################
 set -e
 set -o pipefail
 
-# enable step-by-step printing of commands before they execute:
+# if you need to enable step-by-step printing of commands before they execute, uncomment this:
 # set -x
 
 
@@ -75,13 +75,14 @@ function square_me() {
     squared_value=$(square_number "$number_to_square")
     
     # Use the returned value
-    echo -e "\nThe square of $number_to_square is $squared_value."
+    echo ""
+    echo "The square of $number_to_square is $squared_value."
 }
 
 
-###################
-### if statement:
-###################
+#################
+# if statement:
+#################
 function iffy() {
     local num="$1"
 
@@ -90,14 +91,14 @@ function iffy() {
     elif [[ $num =~ ^[+-]?[0-9]+$ ]]; then
         echo "\$num is '$num', which is a signed integer."
     else
-        echo "\$num is '$num'. Integer not why you forgive me not because for you me?"
+        echo "\$num is '$num'. Integer not you give me for why not because for you?"
     fi
 }
 
 
-###############
-### for loop:
-###############
+#############
+# for loop:
+#############
 function globby() {
     local glob="$1"
     
@@ -107,9 +108,9 @@ function globby() {
 }
 
 
-#################
-### while loop:
-#################
+###############
+# while loop:
+###############
 function countdown() {
     # Initialize the counter
     counter=5
@@ -125,9 +126,9 @@ function countdown() {
 }
 
 
-#####################
-### case statement:
-#####################
+###################
+# case statement:
+###################
 function weekday() {
 
     # Get the current day of the week
@@ -136,7 +137,7 @@ function weekday() {
     # Case statement to print a message based on the day
     case $day in
         Monday)
-            echo "It's the tart of the school week!"
+            echo "It's the start of the school week!"
             ;;
         Tuesday)
             echo "It's Tuesday. Keep going!"
@@ -151,7 +152,7 @@ function weekday() {
             echo "It's Friday! Who do the Hawks play tomorrow?"
             ;;
         Saturday|Sunday)
-            echo "Enjoy your weekend! Monday's on its way"
+            echo "Enjoy your weekend! Monday's on its way."
             ;;
         *)
             echo "Unknown day: $day"
@@ -198,7 +199,7 @@ function fruit_loop() {
 ##################################################
 function main() {
 
-    PS3="What code feature do you want to demo? "
+    PS3=$'\nWhat code feature do you want to demo? '
     options=("functions" "if statement" "for loop" "while loop" "case statement" "select loop" "quit")
 
     echo ""        
@@ -230,11 +231,13 @@ function main() {
                 echo "Calling 'iffy -8'."
                 iffy -8
                 echo ""
-                echo "Calling 'iffy bcd'."
-                iffy bcd
+                echo "Calling 'iffy 0'."
+                iffy 0
                 echo ""
                 echo "calling 'iffy'."
                 iffy
+                echo "Calling 'iffy ab'."
+                iffy ab
                 break
                 ;;
             "for loop")
@@ -296,15 +299,15 @@ function main() {
 }
 
 
-###########################################################
+###################################################################
 # call main()
 #------------
-# this puts the main() function into an infinite loop, so
-# it runs until the user chooses the option to quit.
-###########################################################
+# this puts the main() function into an infinite loop, so it runs 
+# until the user chooses the option to quit.
+###################################################################
 echo ""
-echo "Warning: Portions of this script interact with the user in mashburger"
-echo "         and may not be suitable for adults."
+echo "Warning: Portions of this script may interact with the user"
+echo "         in mashburger, which may not be suitable Mr. Tice."
 echo ""
 
 while true; do
