@@ -129,10 +129,20 @@ function countdown() {
 ###################
 # case statement:
 ###################
+# shellcheck disable=SC2120
 function weekday() {
 
+    # if provided, $debug_date must be in
+    # a format that date can parse:
+    debug_date="${1:-}"
+    if [[ -n "$debug_date" ]]; then
+        day=$(date -d "$debug_date" +%A)
+    else
+        day=$(date +%A)
+    fi
+
     # Get the current day of the week
-    day=$(date +%A)
+    # day=$(date +%A)
     
     # Case statement to print a message based on the day
     case $day in
@@ -236,6 +246,7 @@ function main() {
                 echo ""
                 echo "calling 'iffy'."
                 iffy
+                echo ""
                 echo "Calling 'iffy ab'."
                 iffy ab
                 break
@@ -274,6 +285,10 @@ function main() {
                 echo ""
                 echo "Calling 'weekday'."
                 weekday
+                echo ""
+                echo "Calling 'weekday \"2024-10-20\"' to test for a date that is a Sunday."
+                weekday "2024-10-20"
+                echo ""
                 break
                 ;;
             "select loop")
