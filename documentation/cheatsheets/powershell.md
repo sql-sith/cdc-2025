@@ -1,16 +1,16 @@
 # Items that we should think about documenting and building examples for
 
-| Item      | Status      |
-| ------------- | ------------- |
-| Variables| |
-| Arrays | |
-| Loops | |
-| Dictionary | |
-| Lists | |
-| Functions | |
-| Operators | |
-| File and folder access | |
-| HTTP Web Request (REST API) | |
+| Item                        | Status |
+| --------------------------- | ------ |
+| Variables                   |        |
+| Arrays                      |        |
+| Loops                       |        |
+| Dictionary                  |        |
+| Lists                       |        |
+| Functions                   |        |
+| Operators                   |        |
+| File and folder access      |        |
+| HTTP Web Request (REST API) |        |
 
 
 
