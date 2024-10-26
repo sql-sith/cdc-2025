@@ -88,11 +88,9 @@ cat <file>
 
 ### Standard Streams
 
-**Standard Input (stdin)** : The default source of input for commands (usually the keyboard). Represented as file descriptor 0.
-
-**Standard Output (stdout)** : The default destination for output (usually the terminal). Represented as file descriptor 1.
-
-**Standard Error (stderr)** : The default destination for error messages (usually the terminal). Represented as file descriptor 2.
+* **Standard Input (stdin)** : The default source of input for commands (usually the keyboard). Represented as file descriptor 0.
+* **Standard Output (stdout)** : The default destination for output (usually the terminal). Represented as file descriptor 1.
+* **Standard Error (stderr)** : The default destination for error messages (usually the terminal). Represented as file descriptor 2.
 
 ### File Redirection
 
