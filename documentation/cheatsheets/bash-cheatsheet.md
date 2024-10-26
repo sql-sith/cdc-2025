@@ -132,16 +132,16 @@ command 1>/dev/null 2>&1
 
 * Creating, overwriting, or appending to files using redirection
 
-  ```bash
-  # overwrite an existing file.
-  # the file will be created if necessary.
-  command > <filename>
+```bash
+# overwrite an existing file.
+# the file will be created if necessary.
+command > <filename>
 
-  # append to an existing file.
-  # the file will be created if necessary.
-  command >> <filename>
+# append to an existing file.
+# the file will be created if necessary.
+command >> <filename>
 
-  ```
+```
 
 ## 5. Filesystem Utilities
 
