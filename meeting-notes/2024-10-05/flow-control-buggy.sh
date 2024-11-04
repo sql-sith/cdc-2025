@@ -234,6 +234,7 @@ function main() {
                 echo ""
                 echo "calling 'iffy'."
                 iffy
+                echo ""
                 echo "Calling 'iffy ab'."
                 iffy ab
                 break

@@ -8,8 +8,8 @@
  1102  echo $name
  1103  name=
  1104  echo $name
- 1105  env|grep name
- 1106  set|grep name
+ 1105  env     |      grep name
+ 1106  set | grep name
  1107  clear
  1108  unset $name
  1109  set|grep name
