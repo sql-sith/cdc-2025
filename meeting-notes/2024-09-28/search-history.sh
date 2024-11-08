@@ -72,7 +72,7 @@ function search-history-good {
     history | grep "$search_term" | cut --characters=8-
 }
 
-function search-history-robust {
+function search-history-robust-01 {
     # this solution is more robust than the previous one. it uses the 'awk' command
     # to remove the first field from each line of history. this will work even if the
     # history command changes its output format.
@@ -82,6 +82,23 @@ function search-history-robust {
     # field from each line.
     local search_term=$1
     history | grep "$search_term" | awk ' { $1=""; print $0 } '
+}
+
+
+function search-history-robust-02 {
+
+    local search_term=$1
+    history | grep "$search_term" | sed -E 's/^[[:space:]]*[[:digit:]]+[[:space:]]*//'
+}
+
+function search-history-robust-03 {
+    local search_term=$1
+    history | grep "$search_term" | awk '{ print gensub(/[ \t]*[0-9]+[ \t]*/, "", 1)}'
+}
+
+function search-history-robust-04 {
+    local search_term=$1
+    history | grep "$search_term" | awk '{gsub(/^[\t ]*[0-9]+[\t ]*/, ""); print}'
 }
 
 function demo-function {
@@ -112,7 +129,7 @@ echo "  - search-history-robust"
 echo ""
 echo "The 'search-history-bad' function is the simplest, but it has a bug."
 echo "The 'search-history-good' function fixes the bug, but it's fragile."
-echo "The 'search-history-robust' function is the best of the three."
+echo "The 'search-history-robust\*' functions attempt to be less fragile without sacrificing legibility."
 echo ""
 echo "There are comments in the code of each function that explain how it works, as well as"
 echo "the pros and cons of each approach."
@@ -120,7 +137,7 @@ echo ""
 echo "Let's see them in action. We'll use each to search an emulated bash history for the"
 echo "string \"name\"."
 echo ""
-echo "Finally, while 'search-history-good' and 'search-history-robust' are both correct,"
+echo "Finally, while 'search-history-good' and the 'search-history-robust' scripts are all correct,"
 echo "their output will be slightly different. You should be able to see this when the screen"
 echo "clears the 'search-history-good' output and shows the 'search-history-robust' output."
 echo "The differences are subtle, but they are there."
@@ -131,7 +148,7 @@ echo ""
 read -rsp $'Press enter to continue...\n'
 clear
 
-for function_name in search-history-bad search-history-good search-history-robust; do
+for function_name in search-history-bad search-history-good search-history-robust-0{1..4}; do
     demo-function "$function_name"
     read -rsp $'Press enter to continue...\n'
     clear
