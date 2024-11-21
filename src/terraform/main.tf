@@ -22,7 +22,7 @@ resource "terraform_data" "test" {
   }
   
   provisioner "local-exec" {
-    command = "nc -vz -w 3 localhost ${each.value.port}" #CHECK IF PORT IS RESPONDING
+    command = "nc -vz -w 3 ${each.value.name} ${each.value.port}" #CHECK IF PORT IS RESPONDING
     on_failure = fail
   }
 
@@ -36,7 +36,7 @@ resource "terraform_data" "test" {
         MaxAuthTries = 4,
         ListenAddress = "0.0.0.0",
         LogLevel = "INFO",
-        MaxSessions = 10,
+        MaxSessions = 5,
         IgnoreUserKnownHosts = "no",
         PasswordAuthentication = "yes"
     })
