@@ -137,3 +137,4 @@ _wip/
 vypy/
 AICache/
 *.tfstate
+*.backup

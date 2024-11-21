@@ -6,6 +6,7 @@ resource "terraform_data" "test" {
     password = each.value.password
     host     = each.value.name
     port     = each.value.port
+    timeout  = "5s"
   }
   triggers_replace = [
     timestamp()
@@ -17,10 +18,12 @@ resource "terraform_data" "test" {
       "apt list openssh-server -a", #LIST IF OPENSSH-SERVER IS INSTALLED
       "apt list openssh-client -a" #LIST IF OPENSSH-CLIENT IS INSTALLED
     ]
+    on_failure = fail
   }
   
   provisioner "local-exec" {
-    command = "nc -vz localhost ${each.value.port}" #CHECK IF PORT IS RESPONDING
+    command = "nc -vz -w 3 localhost ${each.value.port}" #CHECK IF PORT IS RESPONDING
+    on_failure = fail
   }
 
   provisioner "file" {
