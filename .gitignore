@@ -136,3 +136,4 @@ _wip/
 .idea/
 vypy/
 AICache/
+*.tfstate
