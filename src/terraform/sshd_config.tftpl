@@ -12,7 +12,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 
 #Port 22
 #AddressFamily any
-#ListenAddress 0.0.0.0
+ListenAddress ${ListenAddress}
 #ListenAddress ::
 
 #HostKey /etc/ssh/ssh_host_rsa_key
@@ -24,7 +24,7 @@ Include /etc/ssh/sshd_config.d/*.conf
 
 # Logging
 #SyslogFacility AUTH
-#LogLevel INFO
+LogLevel ${LogLevel}
 
 # Authentication:
 
@@ -32,7 +32,7 @@ LoginGraceTime ${LoginGraceTime}
 #PermitRootLogin prohibit-password
 #StrictModes yes
 MaxAuthTries ${MaxAuthTries}
-#MaxSessions 10
+MaxSessions ${MaxSessions}
 
 #PubkeyAuthentication yes
 
@@ -48,12 +48,12 @@ MaxAuthTries ${MaxAuthTries}
 #HostbasedAuthentication no
 # Change to yes if you don't trust ~/.ssh/known_hosts for
 # HostbasedAuthentication
-#IgnoreUserKnownHosts no
+IgnoreUserKnownHosts ${IgnoreUserKnownHosts}
 # Don't read the user's ~/.rhosts and ~/.shosts files
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-#PasswordAuthentication yes
+PasswordAuthentication ${PasswordAuthentication}
 #PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with

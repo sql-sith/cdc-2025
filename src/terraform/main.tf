@@ -33,7 +33,12 @@ resource "terraform_data" "test" {
         PrintMotd = "no",
         KbdInteractiveAuthentication = "no",
         LoginGraceTime = "2m",
-        MaxAuthTries = 4
+        MaxAuthTries = 4,
+        ListenAddress = "0.0.0.0",
+        LogLevel = "INFO",
+        MaxSessions = 10,
+        IgnoreUserKnownHosts = "no",
+        PasswordAuthentication = "yes"
     })
     destination = "/tmp/sshd_config"
   }
