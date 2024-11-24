@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# AUTHOR : Isaac Palmersheim (TheEngineerGuy404)
+# DATE : 2024-11-24
 import socket
 import select
 import queue

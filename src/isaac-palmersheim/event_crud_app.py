@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/python
+# AUTHOR : Isaac Palmersheim (TheEngineerGuy404)
+# DATE : 2024-11-24
 import sqlite3
 import datetime
 import sys
