@@ -73,15 +73,20 @@ if [ $num_controller == "2" ]; then
 
     krb5_conf="[libdefaults]\n\tdefault_realm = ${upper_domain_name}\n\trdns = false\n\tudp_preference_limit = 0\n\n[realms]\n\t${upper_domain_name} = {\n\t\tkdc = ${domain_controller_1}\n\t\tkdc = ${domain_controller_2}\n\t\tmaster_kdc = ${domain_controller_1}\n\t\tadmin_server = ${domain_controller_2}\n\t\tdefault_domain = ${domain_name}\n\t}"
     sssd_conf="[sssd]\ndomains = ${domain_name}\nconfig_file_version = 2\nservices = nss, pam\ndebug_level = 6\n\n[domain/${domain_name}]\ndefault_shell = /bin/bash\ncache_credentials = False\nfallback_homedir = /home/%d/%u\nuse_fully_qualified_domain_names = True\nrealmd_tags = manages-system joined-with-adcli\n\nad_server = ${domain_controller_1},${domain_controller_2}\nad_hostname=${hostname}.${domain_name}\nad_domain=${domain_name}\n\nldap_uri=ldap://${domain_controller_1}:389,ldap://${domain_controller_2}:389\nldap_backup_uri=ldap://${domain_controller_1}:389,ldap://${domain_controller_2}:389\nldap_id_mapping = True\n\nkrb5_server = ${domain_controller_1},${domain_controller_2}\nkrb5_realm = ${upper_domain_name}\nkrb5_store_password_if_offline = False\n\nid_provider = ad\naccess_provider = ad\nauth_provider = krb5\nchpass_provider = krb5\nsudo_provider = ad\n"
+
+    echo "" ; echo "Configuring krb5.conf and sssd.conf..."
+
+    echo -e $krb5_conf > /etc/krb5.conf
+    echo -e $sssd_conf > /etc/sssd/sssd.conf
 elif [ -n $num_controller ] || [ "1" -eq $num_controller ]; then
     krb5_conf="[libdefaults]\n\tdefault_realm = ${upper_domain_name}\n\trdns = false\n\tudp_preference_limit = 0\n\n[realms]\n\t${upper_domain_name} = {\n\t\tkdc = ${domain_controller_1}\n\t\tmaster_kdc = ${domain_controller_1}\n\t\tadmin_server = ${domain_controller_1}\n\t\tdefault_domain = ${domain_name}\n\t}"
     sssd_conf="[sssd]\ndomains = ${domain_name}\nconfig_file_version = 2\nservices = nss, pam\ndebug_level = 6\n\n[domain/${domain_name}]\ndefault_shell = /bin/bash\ncache_credentials = False\nfallback_homedir = /home/%d/%u\nuse_fully_qualified_domain_names = True\nrealmd_tags = manages-system joined-with-adcli\n\nad_server = ${domain_controller_1}\nad_hostname=${hostname}.${domain_name}\nad_domain=${domain_name}\n\nldap_uri=ldap://${domain_controller_1}:389\nldap_backup_uri=ldap://${domain_controller_1}:389\nldap_id_mapping = True\n\nkrb5_server = ${domain_controller_1}\nkrb5_realm = ${upper_domain_name}\nkrb5_store_password_if_offline = False\n\nid_provider = ad\naccess_provider = ad\nauth_provider = krb5\nchpass_provider = krb5\nsudo_provider = ad\n"
+
+    echo "" ; echo "Configuring krb5.conf and sssd.conf..."
+
+    echo -e $krb5_conf > /etc/krb5.conf
+    echo -e $sssd_conf > /etc/sssd/sssd.conf
 fi
-
-echo "" ; echo "Configuring krb5.conf and sssd.conf..."
-
-echo -e $krb5_conf > /etc/krb5.conf
-echo -e $sssd_conf > /etc/sssd/sssd.conf
 
 # Pam/make home directory
 echo "Editing pam configuration..." ; echo ""
