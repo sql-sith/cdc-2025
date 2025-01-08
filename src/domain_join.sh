@@ -89,7 +89,7 @@ echo "Editing pam configuration..." ; echo ""
 # Sudo
 read -p "Enable sudo control via SSSD/Active Directory [y/n]: " yes_or_no
 
-if [ $yes_or_no -eq "y" ] || [ $yes_or_no -eq "Y" ]; then
+if [ $yes_or_no == "y" ] || [ $yes_or_no == "Y" ]; then
     read -p "Enter name of group to control sudo access [domain admins]:" sudoers_group_name
 
     if [ -n $sudoers_group_name ]; then
@@ -99,7 +99,7 @@ if [ $yes_or_no -eq "y" ] || [ $yes_or_no -eq "Y" ]; then
     sudoers_group_name="${sudoers_group_name// /\\ }"
     echo "Installing..."
 
-    apt-get install libsss-sudo -y 1> /dev/null
+    echo "" | apt-get install libsss-sudo -y 1> /dev/null
 
     echo "Editing sudoers..."
 
@@ -109,7 +109,7 @@ if [ $yes_or_no -eq "y" ] || [ $yes_or_no -eq "Y" ]; then
 
     echo "Editing sssd.conf..."
 
-    sed "s/services = nss, pam/services = nss, pam, sudo/" /etc/sssd/ > /etc/sssd/sssd.conf
+    sed "s/services = nss, pam/services = nss, pam, sudo/" /etc/sssd/sssd.conf > /etc/sssd/sssd.conf
 fi
 
 # SSH
