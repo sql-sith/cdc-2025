@@ -12,7 +12,7 @@ apt-get install > /dev/null ; apt-get update > /dev/null ; apt-get install > /de
 
 echo "Installing packages..."
 
-apt-get install realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit 1> /dev/null
+apt-get install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit 1> /dev/null
 
 echo ""
 
@@ -99,7 +99,7 @@ if [ $yes_or_no == "y" ] || [ $yes_or_no == "Y" ]; then
     sudoers_group_name="${sudoers_group_name// /\\ }"
     echo "Installing..."
 
-    echo "" | apt-get install libsss-sudo -y 1> /dev/null
+    echo "" | apt-get install -y libsss-sudo 1> /dev/null
 
     echo "Editing sudoers..."
 
@@ -126,6 +126,6 @@ echo "Restarting Services..."
 
 systemctl restart sssd
 systemctl restart sshd
-systemctl restart sssd
+systemctl restart ssh
 
 echo "Install and setup completed. Good luck."
