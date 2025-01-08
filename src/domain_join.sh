@@ -33,7 +33,7 @@ echo "" ; echo "Joining domain..."
 
 realm discover $domain_name 1> /dev/null
 
-echo -e "[libdefaults]\n\trnds = false" > /etc/krb5.conf
+echo -e "[libdefaults]\n\trdns = false" > /etc/krb5.conf
 
 echo $password | realm join -U ${account} $domain_controller 1> /dev/null
 
