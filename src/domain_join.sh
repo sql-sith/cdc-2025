@@ -55,7 +55,7 @@ done
 
 echo -e "${new_nsswitch}" > /etc/nsswitch.conf
 
-echo "" ; echo "Making backups of existing configuration (x.conf.old)..."
+echo "Making backups of existing configuration (x.conf.old)..." ; echo ""
 
 cp /etc/krb5.conf /etc/krb5.conf.old
 cp /etc/sssd/sssd.conf /etc/sssd/sssd.conf.old
@@ -113,7 +113,7 @@ if [ $yes_or_no == "y" ] || [ $yes_or_no == "Y" ]; then
 fi
 
 # SSH
-read -p "Enable active directory access over ssh [y/n]: " yes_or_no
+echo "" ; read -p "Enable active directory access over ssh [y/n]: " yes_or_no
 
 if [ $yes_or_no == "y" ] || [ $yes_or_no == "Y" ]; then
     sed "s/UsePAM no/UsePAM yes/" /etc/ssh/sshd_config > /etc/ssh/sshd_config
@@ -124,6 +124,8 @@ fi
 # Restarting configured services
 echo "Restarting Services..."
 
-systemctl restart sshd ssh sssd
+systemctl restart sssd
+systemctl restart sshd
+systemctl restart sssd
 
 echo "Install and setup completed. Good luck."
