@@ -65,6 +65,8 @@ read -p "Enter number of domain controllers [1]: " num_controller
 
 read -p "Enter fqdn of domain controller 1 [dc1.example.com]: " domain_controller_1
 
+krb5_conf=""
+sssd_conf=""
 hostname=$(hostname)
 if [ $num_controller == "2" ]; then
     read -p "Enter fqdn of domain controller 2 [dc2.example.com]: " domain_controller_2
@@ -79,7 +81,7 @@ fi
 echo "" ; echo "Configuring krb5.conf and sssd.conf..."
 
 echo -e $krb5_conf > /etc/krb5.conf
-echo -e $sssd_conf > /etc/sssd.conf
+echo -e $sssd_conf > /etc/sssd/sssd.conf
 
 # Pam/make home directory
 echo "Editing pam configuration..." ; echo ""
