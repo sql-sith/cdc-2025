@@ -111,18 +111,8 @@ chmod u+w,g+w /etc/sudoers
 (cat /etc/sudoers ; echo -e "%${sudoers_group_name}@${domain_name} ALL=(ALL) ALL") > /etc/sudoers
 chmod u-w,g-w /etc/sudoers
 
-
-# SSH
-echo "" ; read -p "Enable active directory access over ssh [y/n]: " yes_or_no
-
-if [ $yes_or_no == "y" ] || [ $yes_or_no == "Y" ]; then
-    sed "s/UsePAM no/UsePAM yes/" /etc/ssh/sshd_config > /etc/ssh/sshd_config
-    sed "s/KdbInteractiveAuthentication no/KdbInteractiveAuthentication yes/" /etc/ssh/sshd_config > /etc/ssh/sshd_config
-    sed "s/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/" /etc/ssh/sshd_config > /etc/ssh/sshd_config
-fi
-
 # Restarting configured services
-echo "Restarting Services..."
+echo "" ; echo "Restarting Services..." ; echo ""
 
 systemctl restart sssd
 systemctl restart sshd
