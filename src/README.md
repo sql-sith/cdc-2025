@@ -1,5 +1,39 @@
-<!-- Created by SQL Sith in 2024 -->
+<!-- Created by SQL Sith in 2024 --
 
-# Placeholder file
+# Links and Other Resources for Installing Elasticsearch
 
-This README is a placeholder file so that GitHub will create its parent directory.
+## Using Proxies with `git` and `gh`
+
+`git` has its own proxy settings.
+
+*Adapted from [stackoverflow](https://stackoverflow.com/a/19213999/1236579):*
+
+```bash
+git config --global http.proxy http://199.100.16.100:3128
+git config --global https.proxy http://199.100.16.100:3128
+```
+
+`gh` can use the `HTTPS_PROXY` environment variable. See GitHub [here](https://github.com/cli/cli/discussions/7602) and [here](https://github.com/cli/cli/issues/2037).
+
+*Specific code adapted from [this answer]()https://github.com/cli/cli/issues/2037#issuecomment-2564202627). I have not tested these solutions, but they look right.*
+
+```bash
+# bash
+alias gh="HTTPS_PROXY='http://localhost:7890' gh"
+```
+
+```powershell
+# pwsh
+function gh_proxy {
+    $originalProxy = $env:HTTPS_PROXY
+    $env:HTTPS_PROXY = 'http://localhost:7890'
+  
+    try {
+        gh.exe @Args
+    } finally {
+        $env:HTTPS_PROXY = $originalProxy
+    }
+}
+
+Set-Alias gh gh_proxy
+```
