@@ -18,7 +18,9 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Task Verification:** The team discussed the importance of task verification, where a task is reviewed by another team member before being marked as complete. This step ensures the quality and accuracy of the work done.
 * **Workflow Documentation:** Axel mentioned the need to document the workflow in JIRA, including the steps involved in task management and the tools used. This documentation helps in maintaining consistency and clarity in the team's processes.
 
-`</details>`
+
+</span>
+</details>
 
 <details>
 <summary><b>Teamwork and Accountability:</b> Chris acknowledged the team’s efforts in improving teamwork and accountability. They discussed the importance of involving quiet members and presenting their work in the next meeting. Chris appreciated the team’s progress and emphasized the importance of these skills for their future careers.
@@ -29,7 +31,8 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Team Involvement:** Chris emphasized the importance of involving quieter team members in discussions and tasks. This approach helps in ensuring that all team members are engaged and contributing to the team's success.
 * **Presentation of Work:** Chris highlighted the need for team members to present their work in the next meeting. This practice promotes accountability and allows for feedback and improvement. <><>
 
-`</details>`
+</span>
+</details>
 
 <details>
 <summary><b>Task Management Process:</b> Axel and Michael explained the task management process in JIRA, including creating tasks, assigning them, and moving them through different stages. They highlighted the importance of documenting the workflow and addressing gaps in their current process.
@@ -41,7 +44,8 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Workflow Gaps:** The team identified gaps in their current task management process and discussed how JIRA can help address these gaps. This includes better tracking of task progress and ensuring that all tasks are verified and documented properly.
 * **Documentation:** Axel mentioned the importance of documenting the workflow in JIRA. This documentation helps in maintaining consistency and clarity in the team's processes, ensuring that everyone is on the same page.
 
-`</details>`
+</span>
+</details>
 
 <details>
 <summary><b>Windows Security:</b> The team discussed the need to improve their knowledge of securing Windows machines. They identified tasks such as checking for vulnerabilities like EternalBlue, managing group policies, and updating software. Tristan offered to provide demonstrations and share their knowledge with the team.
@@ -54,8 +58,9 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Software Updates:** Updating software regularly is essential for maintaining security. The team discussed the need to ensure that all software on Windows machines is up-to-date to prevent vulnerabilities.
 * **Demonstrations:** Tristan offered to provide demonstrations on various aspects of Windows security, including vulnerability checking, group policy management, and software updates. These demonstrations will help the team improve their knowledge and skills in securing Windows machines.
 
-`</details>`
-
+</span>
+</details>
+]
 <details>
 <summary><b>Summer Meetings and Future Plans:</b> The team agreed to continue meeting over the summer to cover various topics, including hypervisors and vulnerability scanning. They also discussed the possibility of reaching out to companies for sponsorship and using their products in future competitions.
 </summary>
@@ -65,7 +70,8 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Summer Meetings:** The team agreed to hold meetings over the summer to cover important topics such as hypervisors and vulnerability scanning. These meetings will help the team stay prepared and improve their skills.
 * **Sponsorship:** The team discussed reaching out to companies for sponsorship and permission to use their products in future competitions. This approach could provide valuable resources and support for the team.
 
-`</details>`
+</span>
+</details>
 
 <details>
 <summary><b>Tristan’s Future Involvement:</b> Tristan expressed their intention to continue attending meetings as a mentor after graduating. They offered to provide guidance and support to the team, sharing their knowledge and experience in managing Windows machines and other topics.
@@ -76,7 +82,8 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Mentorship:** Tristan offered to continue attending meetings as a mentor after graduating. They will provide guidance and support to the team, sharing their knowledge and experience in managing Windows machines and other topics.
 * Knowledge Sharing: Tristan will share their knowledge and experience with the team, helping them improve their skills in various areas, including Windows security and task management.
 
-`</details>`
+</span>
+</details>
 
 <details>
 <summary><b>Follow-up tasks</b></summary>
@@ -90,4 +97,6 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * Summer Meeting Topics: Compile a list of topics to cover during summer meetings, including hypervisors and other advanced topics. (Chris)
 * JIRA User Management: Verify the number of users on the JIRA account and ensure it does not exceed the limit of 10 users. (Chris)
 
-`</details>`
+
+</span>
+</details>
