@@ -86,7 +86,11 @@ function square_me() {
 function iffy() {
     local num="$1"
 
-    if [[ $num =~ ^[0-9]+$ ]]; then
+    # chris's solution:
+    # if [[ $num =~ ^[0-9]+$ ]]; then
+    #
+    # henry's much simpler solution:
+    if [[ $num == 0 ]]; then
         echo "\$num is '$num', which is an unsigned integer."
     elif [[ $num =~ ^[+-]?[0-9]+$ ]]; then
         echo "\$num is '$num', which is a signed integer."

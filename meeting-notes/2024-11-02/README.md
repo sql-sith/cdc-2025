@@ -104,11 +104,8 @@ Deciding when to use quotation marks and when not to can be tricky to learn. Her
    $ ls $myglob
    file-01.txt  file-02.txt  file-03.txt  file-04.txt  file-05.txt
 
-
    ```
-
-#### Trade-offs in coding
-
+   
 We talked about how sometimes, as a programmer, you need to decide where the right place is to balance desirable characteristics like robustness, correctness, and performance against other desirable characteristics like speed of development, legibility, and maintainability. Sometimes bullet-proof code can be hard to read and maintain, and might take longer to produce. But sometimes the code _has_ to be bullet-proof. On the other hand, sometimes it's OK for code to be "good enough," and in those cases issues like readability may be more important.
 
 I gave an example of this for the `search-history.sh` script [in Zulip](https://cyberdefense.zulipchat.com/#narrow/channel/406656-random/topic/random.20tech/near/480349628). For private and ad-hoc use, our simplest solution might be the best one, but if that code were being rolled out to customers, if you click on the link, I demonstrate that it's possible that the code will break. If you expect to have many customers, your original code may quickly become "tech debt" - code you have to rewrite soon.
