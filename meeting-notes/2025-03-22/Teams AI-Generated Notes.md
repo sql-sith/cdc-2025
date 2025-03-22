@@ -2,7 +2,7 @@
 
 # AI-Generated Meeting Notes
 
-*Date: 2025-03-22*
+*Date: 2025-03-22*<br/>
 *Attending: Aksel, Isaac, Kizek, Koa, Michael, Tristan, Chad, Dan, and Chris*
 
 <details>
