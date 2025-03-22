@@ -60,7 +60,7 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 
 </span>
 </details>
-]
+
 <details>
 <summary><b>Summer Meetings and Future Plans:</b> The team agreed to continue meeting over the summer to cover various topics, including hypervisors and vulnerability scanning. They also discussed the possibility of reaching out to companies for sponsorship and using their products in future competitions.
 </summary>
@@ -96,7 +96,6 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * Company Sponsorships: Reach out to companies like Nessus to explore sponsorship opportunities and obtain trial licenses for competition use. (Dan)
 * Summer Meeting Topics: Compile a list of topics to cover during summer meetings, including hypervisors and other advanced topics. (Chris)
 * JIRA User Management: Verify the number of users on the JIRA account and ensure it does not exceed the limit of 10 users. (Chris)
-
 
 </span>
 </details>
