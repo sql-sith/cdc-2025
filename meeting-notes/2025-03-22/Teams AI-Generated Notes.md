@@ -2,7 +2,7 @@
 
 # AI-Generated Meeting Notes
 
-*Date: 2025-03-22*
+*Date: 2025-03-22*<br/>
 *Attending: Aksel, Isaac, Kizek, Koa, Michael, Tristan, Chad, Dan, and Chris*
 
 <details>
@@ -17,7 +17,6 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Custom Fields:** Michael highlighted the ability to add custom fields to tasks in JIRA, such as due dates and additional properties. This feature allows for more detailed task management and better tracking of task requirements.
 * **Task Verification:** The team discussed the importance of task verification, where a task is reviewed by another team member before being marked as complete. This step ensures the quality and accuracy of the work done.
 * **Workflow Documentation:** Axel mentioned the need to document the workflow in JIRA, including the steps involved in task management and the tools used. This documentation helps in maintaining consistency and clarity in the team's processes.
-
 
 </span>
 </details>
@@ -60,7 +59,7 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 
 </span>
 </details>
-]
+
 <details>
 <summary><b>Summer Meetings and Future Plans:</b> The team agreed to continue meeting over the summer to cover various topics, including hypervisors and vulnerability scanning. They also discussed the possibility of reaching out to companies for sponsorship and using their products in future competitions.
 </summary>
@@ -96,7 +95,6 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * Company Sponsorships: Reach out to companies like Nessus to explore sponsorship opportunities and obtain trial licenses for competition use. (Dan)
 * Summer Meeting Topics: Compile a list of topics to cover during summer meetings, including hypervisors and other advanced topics. (Chris)
 * JIRA User Management: Verify the number of users on the JIRA account and ensure it does not exceed the limit of 10 users. (Chris)
-
 
 </span>
 </details>
