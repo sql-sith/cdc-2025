@@ -18,7 +18,6 @@ Chris, Axel, and Michael demonstrated the use of JIRA as a potential replacement
 * **Task Verification:** The team discussed the importance of task verification, where a task is reviewed by another team member before being marked as complete. This step ensures the quality and accuracy of the work done.
 * **Workflow Documentation:** Axel mentioned the need to document the workflow in JIRA, including the steps involved in task management and the tools used. This documentation helps in maintaining consistency and clarity in the team's processes.
 
-
 </span>
 </details>
 
