@@ -6,6 +6,7 @@ class Solution:
     logger = logging.getLogger()
 
     def __init__(self):
+        # todo: use the logger
         self.logger.name = "gcdOfStrings"
         self.logger.addHandler(logging.StreamHandler(stream=sys.stderr))
         self.logger.setLevel("DEBUG")
@@ -45,7 +46,7 @@ class Solution:
             "test_02b": {
                 "str1": "ABABABAB",
                 "str2": "ABAB",
-                "expected_result": "AB",
+                "expected_result": "ABAB",
                 "description": "matching a repetitive block, partial word",
             },
             "test_03a": {
